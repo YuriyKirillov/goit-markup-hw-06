@@ -244,7 +244,7 @@ margin-right: auto;
 background-color: var(--secondary-bg-cl);
 padding-top: 200px;
 padding-bottom: 200px;
-background-image:url(../images/Overlay.png), url(../images/Main.jpg);
+background-image:url(../images/Title/Overlay.png), url(../images/Title/Main.jpg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
@@ -728,6 +728,7 @@ visibility: hidden;
 
 .modal {
 position: absolute;
+padding: 40px;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
@@ -754,6 +755,7 @@ padding: 0;
 border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 50%;
 cursor: pointer;
+background-color: transparent;
 }
 
 @keyframes modal-window {
@@ -774,4 +776,226 @@ cursor: pointer;
  transform-origin: center;
 }
 
+}
+
+.form-field {
+position: relative;
+display: flex;
+flex-direction: column;
+margin-bottom: 10px;
+}
+
+.text {
+margin-bottom: 20px; 
+}
+
+.text-footer {
+ margin-bottom: 20px; 
+flex-direction: row;   
+gap: 12px;
+margin-bottom: 0;
+}
+
+.input-information {
+ position: relative;   
+ 
+}
+
+.form-input {
+ width: 100%;   
+ height: 40px;
+ padding-left: 42px;
+ padding-right: 42px;
+ border: 1px solid rgba(33, 33, 33, 0.2);
+ border-radius: 4px;
+ outline: transparent;
+ transition: border-color var(--animation);
+}
+
+
+.form-text {
+margin-bottom: 4px;
+font-size: 12px;
+line-height: calc(14 / 12);
+letter-spacing: 0.01em;
+color: var(--secondary-txt-cl);
+}
+
+.register-form-text {
+font-weight: 700;
+font-size: 20px;
+line-height: calc(23 / 20);
+text-align: center;
+letter-spacing: 0.03em;
+color: #212121;
+margin-bottom: 12px;
+}
+
+.modal-icon {
+ position: absolute;  
+ left: 12px;
+ top: 50%;
+ transform: translateY(-50%);
+transition: fill var(--animation);
+}
+
+.cross {
+fill:#000000;
+transition: fill var(--animation);
+}
+
+
+.cross:hover,
+.cross:focus {
+fill: var(--accent-txt-cl);  
+}
+
+.comment-text {
+width: 100%;
+height: 120px;
+resize: none;
+outline: transparent;
+padding-top: 12px;
+padding-bottom: 12px;
+padding-left: 16px;
+padding-right: 16px;
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+transition: border-color var(--animation);
+}
+
+.comment-text::placeholder {
+font-weight: 400;
+font-size: 12px;
+line-height: calc(14 / 12);
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
+
+}
+
+.input-information {
+transition: fill var(--animation);    
+}
+
+.input-information:hover .modal-icon,
+.input-information:focus .modal-icon {
+fill: var(--accent-txt-cl);  
+}
+
+.input-information:hover,
+.input-information:focus,
+.comment-text:hover,
+.comment-text:focus{
+border-color: var(--accent-txt-cl);
+}
+
+.form-input:hover ,
+.form-input:focus {
+border-color: var(--accent-txt-cl);
+}
+
+.form-fild-checkbox {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 30px;
+gap: 7px;
+}
+
+.form-desc {
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: 0.03em;
+color: var(--secondary-txt-cl);
+user-select: none;
+}
+
+.form-link {
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: 0.03em;
+text-decoration-line: underline;
+color: var(--accent-txt-cl);
+
+}
+
+.form-ckeckbox:checked + .register-form-icons 
+.icon-checked {
+opacity: 1;
+}
+
+.icon-checked {
+opacity: 0;
+background: var(--accent-txt-cl);
+border-radius: 2px;
+transition: opacity var(--animation);
+}
+
+.form-ckeckbox:checked + .register-form-icons 
+.icon-unchecked {
+opacity: 0;
+}
+
+.icon-unchecked {
+opacity: 1;
+transition: opacity var(--animation);
+}
+
+.form-btn {
+display: block;
+margin: 0 auto;
+}
+
+.footer-comment-text {
+width: 358px;
+height: 50px;
+
+padding: 14px;
+
+background: #2F303A;
+border: 1px solid rgba(255, 255, 255, 0.3);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;  
+resize: none;  
+outline: transparent;
+
+}
+
+.footer-comment-text::placeholder {
+font-weight: 400;
+font-size: 16px;
+line-height: calc(20 / 16);
+display: flex;
+align-items: center;
+justify-content: center;
+letter-spacing: 0.03em;
+color: rgba(255, 255, 255, 0.6);   
+}
+
+
+.mail-btn {
+width: 200px;   
+position: relative; 
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.icon-logo {
+display: block;    
+position: absolute;
+right: 28px;
+top: 13px;
+z-index: 10;
+fill: var(--icon-bg-cl);
+}
+
+.mail-logo {
+display: block;    
+position: absolute;
+left: 28px;
+z-index: 10;   
 }

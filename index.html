@@ -38,14 +38,14 @@
             <li class="nav-item">
               <a
                 class="link color-active"
-                href="https://yuriykirillov.github.io/goit-markup-hw-05/index.html"
+                href="https://yuriykirillov.github.io/goit-markup-hw-06/index.html"
                 >Студія</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="link"
-                href="https://yuriykirillov.github.io/goit-markup-hw-05/portfolio.html"
+                href="https://yuriykirillov.github.io/goit-markup-hw-06/portfolio.html"
                 >Портфоліо</a
               >
             </li>
@@ -157,7 +157,7 @@
             <li>
               <div class="box-item">
                 <img
-                  src="images/box-1.jpg"
+                  src="images/Opportunity/box-1.jpg"
                   alt="робота"
                   width="370"
                   height="294"
@@ -170,7 +170,7 @@
             <li>
               <div class="box-item">
                 <img
-                  src="images/box-2.jpg"
+                  src="images/Opportunity/box-2.jpg"
                   alt="перевірка"
                   width="370"
                   height="294"
@@ -183,7 +183,7 @@
             <li>
               <div class="box-item">
                 <img
-                  src="images/box-3.jpg"
+                  src="images/Opportunity/box-3.jpg"
                   alt="результат"
                   width="370"
                   height="294"
@@ -204,7 +204,7 @@
           <ul class="list list-team">
             <li class="team-color">
               <img
-                src="images/img-1.jpg"
+                src="images/Our team/img-1.jpg"
                 alt="designer"
                 width="270"
                 height="260"
@@ -270,7 +270,7 @@
             </li>
             <li class="team-color">
               <img
-                src="images/img-2.jpg"
+                src="images/Our team/img-2.jpg"
                 alt="developer"
                 width="270"
                 height="260"
@@ -336,7 +336,7 @@
             </li>
             <li class="team-color">
               <img
-                src="images/img-3.jpg"
+                src="images/Our team/img-3.jpg"
                 alt="marketing"
                 width="270"
                 height="260"
@@ -402,7 +402,7 @@
             </li>
             <li class="team-color">
               <img
-                src="images/img-4.jpg"
+                src="images/Our team/img-4.jpg"
                 alt="UIdesigner"
                 width="270"
                 height="260"
@@ -557,6 +557,7 @@
           </address>
         </div>
 
+       
         <div class="social-network">
           <h2 class="footer-text">приєднуйтесь</h2>
           <ul class="socials list">
@@ -617,6 +618,22 @@
             </li>
           </ul>
         </div>
+
+        <form action="">
+          <div class="footer-comment">
+            <h2 class="footer-text">Підпишіться на розсилку</h2>
+            <label class="form-field text-footer">
+            <textarea class="footer-comment-text" name="comment" cols="" rows="6" placeholder="E-mail"></textarea>
+          <button class="mail-btn btn" type="submit" >
+            <svg class="icon-logo" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+            <span class="mail-logo">Підписатися</span>
+          </button>
+          </label>
+        </div>
+        </form>
+
       </div>
     </footer>
 
@@ -624,10 +641,65 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
-          <svg class="" width="18" height="18">
+          <svg class="cross" width="18" height="18">
             <use href="./images/icons.svg#Vector"></use>
           </svg>
         </button>
+        <form class="register-form" name="register-form">
+          <h2 class="register-form-text">Залиште свої дані, ми вам передзвонимо</h2>
+          <div class="register-form-group" role="group">
+
+            <label class="form-field">
+              <span class="form-text">Ім'я</span>
+              <div class="input-information"> 
+                <input type="text" class="form-input" name="name" />
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/icons.svg#person-black"></use>
+                </svg>
+              </div>
+            </label>
+
+            <label class="form-field">
+              <span class="form-text">Телефон</span>
+              <div class="input-information"> 
+                <input type="tel" class="form-input" name="tel" />
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/icons.svg#phone-black"></use>
+                </svg>
+              </div>
+            </label>
+
+            <label class="form-field">
+              <span class="form-text">Пошта</span>
+              <div class="input-information"> 
+                <input type="email" class="form-input" name="email" />
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/icons.svg#email-black"></use>
+                </svg>
+              </div>
+            </label>
+
+            <label class="form-field text">
+              <span class="form-text">Коментар</span>
+              <textarea class="comment-text" name="comment" cols="50" rows="6" placeholder="Введіть текст"></textarea>
+            </label>
+
+          </div>
+
+            <label class="form-fild-checkbox">
+              <input class="form-ckeckbox visually-hidden" type="checkbox" name="checkbox" />
+              <svg class="register-form-icons" width="16" height="15">
+                <use class="icon-checked" href="./images/icons.svg#Vector-1"></use>
+                <use class="icon-unchecked" href="./images/icons.svg#Vector-2"></use>
+              </svg>
+              <span class="form-desc">Погоджуюся з розсилкою та приймаю 
+                <a class="form-link" href="">Умови договору</a>
+              </span>
+            </label>
+
+            <button class="form-btn btn" type="submit">Відправити</button>
+          
+        </form>
       </div>
     </div>
 
