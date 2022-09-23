@@ -502,12 +502,21 @@ padding-top: 60px;
 padding-bottom: 60px;
 }
 
+.logo-contacts {
+margin-right: 70px; 
+flex-grow: 1;
+}
+
 .logo-footer {
 margin-bottom: 20px;
 }
 
+.social-network {
+margin-right: 93px;      
+}
+
 .logo-span-footer {
- color: var(--main-bg-cl);   
+color: var(--main-bg-cl);   
 }
 
 .address-footer {
@@ -528,9 +537,9 @@ color: rgba(255, 255, 255, 0.6);
 text-decoration: none;
 }
 
-
 .list-footer {
 text-decoration: none;
+width: 231px;
 }
 
 .footer {
@@ -553,7 +562,6 @@ margin-bottom: 20px;
 
 .container-footer {
 display: flex;
-gap: 70px;   
 align-items: baseline;
 }
 
@@ -718,6 +726,12 @@ z-index: 100;
 width: 100%;
 height: 100%;
 background: rgba(0, 0, 0, 0.2);
+opacity: 1;
+visibility: visible;
+transition-property: opacity, visibility;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-delay: 0;
 }
 
 .backdrop.is-hidden {
@@ -739,6 +753,7 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 border-radius: 4px;
 animation: modal-window 1500ms ease-in 400ms;
 transition: animation var(--animation);
+transition-duration: 1s;
 }
 
 .modal-btn {
@@ -785,10 +800,6 @@ flex-direction: column;
 margin-bottom: 10px;
 }
 
-.text {
-margin-bottom: 20px; 
-}
-
 .text-footer {
  margin-bottom: 20px; 
 flex-direction: row;   
@@ -829,6 +840,14 @@ text-align: center;
 letter-spacing: 0.03em;
 color: #212121;
 margin-bottom: 12px;
+}
+
+.register-form-group {
+margin-bottom: 20px;   
+}
+
+.text {
+margin-bottom: 0px;       
 }
 
 .modal-icon {
@@ -877,21 +896,30 @@ color: rgba(117, 117, 117, 0.5);
 transition: fill var(--animation);    
 }
 
-.input-information:hover .modal-icon,
-.input-information:focus .modal-icon {
-fill: var(--accent-txt-cl);  
-}
 
-.input-information:hover,
-.input-information:focus,
+
 .comment-text:hover,
 .comment-text:focus{
 border-color: var(--accent-txt-cl);
 }
 
-.form-input:hover ,
+.form-input:focus-within ~ .modal-icon,
+.form-input:hover ~ .modal-icon
+{
+ fill: var(--accent-txt-cl);  
+
+}
+
+.form-input:focus ~ .modal-icon, 
+.form-input:hover ~ .modal-icon 
+{
+fill: var(--accent-txt-cl); 
+  
+}
+
+.form-input:hover,
 .form-input:focus {
-border-color: var(--accent-txt-cl);
+border-color: var(--accent-txt-cl);       
 }
 
 .form-fild-checkbox {
@@ -948,12 +976,17 @@ display: block;
 margin: 0 auto;
 }
 
+.footer-comment {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;   
+}
+
 .footer-comment-text {
 width: 358px;
 height: 50px;
-
 padding: 14px;
-
 background: #2F303A;
 border: 1px solid rgba(255, 255, 255, 0.3);
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
